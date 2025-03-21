@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { compliments, Compliment } from './data/compliments';
 import { HeartIcon, ShareIcon } from '@heroicons/react/24/outline';
 import MusicPlayer from './components/MusicPlayer';
+import Snowfall from './components/Snowfall';
+import Footer from './components/Footer';
 
 function App() {
   const [currentCompliment, setCurrentCompliment] = useState<Compliment | null>(null);
@@ -52,7 +54,8 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-200 via-sky-100 to-blue-100">
-      <div className="container mx-auto px-4 py-8">
+      <Snowfall />
+      <div className="container mx-auto px-4 py-8 pb-16">
         <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">
           夸夸机器人
         </h1>
@@ -147,6 +150,7 @@ function App() {
         </div>
       </div>
       <MusicPlayer />
+      <Footer />
     </div>
   );
 }
